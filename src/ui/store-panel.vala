@@ -14,6 +14,7 @@ namespace G4 {
         "folder-music-symbolic",            // TITLE
         "document-open-recent-symbolic",    // RECENT
         "media-playlist-shuffle-symbolic",  // SHUFFLE
+        "folder",                           // FILE_NAME
     };
 
     [GtkTemplate (ui = "/com/github/neithern/g4music/gtk/store-panel.ui")]

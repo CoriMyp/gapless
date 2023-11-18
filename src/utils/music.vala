@@ -255,6 +255,10 @@ namespace G4 {
             return (int) diff.clamp (-1, 1);
         }
 
+        public static int compare_by_file_name (Music s1, Music s2) {
+            return strcmp (s1.uri, s2.uri);
+        }
+
         public static inline uint32 gst_date_time_to_uint (Gst.DateTime? dt) {
             if (dt != null) {
                 var d = (!)dt;

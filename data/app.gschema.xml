@@ -67,7 +67,7 @@
       <summary>Show audio peak level</summary>
     </key>
     <key name="sort-mode" type="u">
-      <range min="0" max="5"/>
+      <range min="0" max="6"/>
       <default>2</default>
       <summary>Sort Mode</summary>
     </key>

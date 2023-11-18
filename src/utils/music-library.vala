@@ -7,7 +7,8 @@ namespace G4 {
         public const uint TITLE = 3;
         public const uint RECENT = 4;
         public const uint SHUFFLE = 5;
-        public const uint MAX = 5;
+        public const uint FILE_NAME = 6;
+        public const uint MAX = 6;
     }
 
     public class Album : Music {
@@ -326,6 +327,8 @@ namespace G4 {
                 return Music.compare_by_title;
             case SortMode.RECENT:
                 return Music.compare_by_recent;
+            case SortMode.FILE_NAME:
+                return Music.compare_by_file_name;
             default:
                 return Music.compare_by_order;
         }
