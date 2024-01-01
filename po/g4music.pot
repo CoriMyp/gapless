@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: g4music\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-19 12:11+0800\n"
+"POT-Creation-Date: 2024-01-01 22:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/app.desktop.in:3 src/application.vala:232 src/main.vala:24
+#: data/app.desktop.in:3 src/application.vala:235 src/main.vala:24
 msgid "G4Music"
 msgstr ""
 
@@ -33,191 +33,191 @@ msgstr ""
 msgid "music;sound;player;media;audio;playlist;"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:11
+#: src/gtk/help-overlay.blp:11
 msgctxt "shortcut window"
 msgid "General"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:14
+#: src/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:20
+#: src/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:26
+#: src/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:34
+#: src/gtk/help-overlay.blp:30
 msgctxt "shortcut window"
 msgid "Playback"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:37
+#: src/gtk/help-overlay.blp:33
 msgctxt "shortcut window"
 msgid "Play/Pause"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:43
+#: src/gtk/help-overlay.blp:38
 msgctxt "shortcut window"
 msgid "Play Next"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:49
+#: src/gtk/help-overlay.blp:43
 msgctxt "shortcut window"
 msgid "Play Previous"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:57
+#: src/gtk/help-overlay.blp:49
 msgctxt "shortcut window"
 msgid "Playlist"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:60
+#: src/gtk/help-overlay.blp:52
 msgctxt "shortcut window"
 msgid "Search"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:66
+#: src/gtk/help-overlay.blp:57
 msgctxt "shortcut window"
 msgid "Toggle Sort"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:72
+#: src/gtk/help-overlay.blp:62
 msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr ""
 
-#: src/gtk/play-panel.ui:16 src/ui/store-panel.vala:340
+#: src/gtk/play-panel.blp:15 src/ui/store-panel.vala:340
 msgid "Back"
 msgstr ""
 
-#: src/gtk/preferences.ui:10
+#: src/gtk/preferences.blp:9
 msgid "General"
 msgstr ""
 
-#: src/gtk/preferences.ui:14
+#: src/gtk/preferences.blp:13
 msgid "Prefer dark theme"
 msgstr ""
 
-#: src/gtk/preferences.ui:26
+#: src/gtk/preferences.blp:23
 msgid "Background blur mode"
 msgstr ""
 
-#: src/gtk/preferences.ui:32
+#: src/gtk/preferences.blp:28
 msgid "Compact playlist view"
 msgstr ""
 
-#: src/gtk/preferences.ui:44
+#: src/gtk/preferences.blp:38
 msgid "Grid view for artists/albums"
 msgstr ""
 
-#: src/gtk/preferences.ui:56 src/application.vala:432
+#: src/gtk/preferences.blp:48 src/application.vala:435
 msgid "Keep playing after window closed"
 msgstr ""
 
-#: src/gtk/preferences.ui:69
+#: src/gtk/preferences.blp:58
 msgid "Library"
 msgstr ""
 
-#: src/gtk/preferences.ui:73
+#: src/gtk/preferences.blp:62
 msgid "Load music from folder"
 msgstr ""
 
-#: src/gtk/preferences.ui:85
+#: src/gtk/preferences.blp:72
 msgid "Monitor local file changes"
 msgstr ""
 
-#: src/gtk/preferences.ui:97
+#: src/gtk/preferences.blp:82
 msgid "Load thumbnails for non-local files"
 msgstr ""
 
-#: src/gtk/preferences.ui:98
+#: src/gtk/preferences.blp:83
 msgid "May cause slowdowns and excess network usage"
 msgstr ""
 
-#: src/gtk/preferences.ui:111
+#: src/gtk/preferences.blp:93
 msgid "Playback"
 msgstr ""
 
-#: src/gtk/preferences.ui:115
+#: src/gtk/preferences.blp:97
 msgid "Show audio peak level"
 msgstr ""
 
-#: src/gtk/preferences.ui:119
+#: src/gtk/preferences.blp:101
 msgid "Display characters"
 msgstr ""
 
-#: src/gtk/preferences.ui:134
+#: src/gtk/preferences.blp:113
 msgid "Rotate album cover"
 msgstr ""
 
-#: src/gtk/preferences.ui:146
+#: src/gtk/preferences.blp:123
 msgid "Enable gapless playback"
 msgstr ""
 
-#: src/gtk/preferences.ui:158
+#: src/gtk/preferences.blp:133
 msgid "Normalize volume with ReplayGain"
 msgstr ""
 
-#: src/gtk/preferences.ui:164
+#: src/gtk/preferences.blp:138
 msgid "Prefer audio sink of GStreamer"
 msgstr ""
 
-#: src/gtk/store-panel.ui:22
+#: src/gtk/store-panel.blp:21
 msgid "Main Menu"
 msgstr ""
 
-#: src/gtk/store-panel.ui:28
-msgid "Sort By"
+#: src/gtk/store-panel.blp:27
+msgid "Sort by"
 msgstr ""
 
-#: src/gtk/store-panel.ui:35
+#: src/gtk/store-panel.blp:34
 msgid "Search"
 msgstr ""
 
-#: src/gtk/store-panel.ui:73
-msgid "_Reload Library"
+#: src/gtk/store-panel.blp:63
+msgid "Reload Library"
 msgstr ""
 
-#: src/gtk/store-panel.ui:79
-msgid "_Preferences"
+#: src/gtk/store-panel.blp:68
+msgid "Preferences"
 msgstr ""
 
-#: src/gtk/store-panel.ui:83
-msgid "_Keyboard Shortcuts"
+#: src/gtk/store-panel.blp:73
+msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/gtk/store-panel.ui:87
-msgid "_About"
+#: src/gtk/store-panel.blp:78
+msgid "About"
 msgstr ""
 
-#: src/gtk/store-panel.ui:96 src/ui/preferences.vala:67
+#: src/gtk/store-panel.blp:87 src/ui/preferences.vala:67
 msgid "Album"
 msgstr ""
 
-#: src/gtk/store-panel.ui:101
+#: src/gtk/store-panel.blp:93
 msgid "Artist"
 msgstr ""
 
-#: src/gtk/store-panel.ui:106
+#: src/gtk/store-panel.blp:99
 msgid "Artist/Album"
 msgstr ""
 
-#: src/gtk/store-panel.ui:111
+#: src/gtk/store-panel.blp:105
 msgid "Title"
 msgstr ""
 
-#: src/gtk/store-panel.ui:116
+#: src/gtk/store-panel.blp:111
 msgid "Recent"
 msgstr ""
 
-#: src/gtk/store-panel.ui:121
+#: src/gtk/store-panel.blp:117
 msgid "Shuffle"
 msgstr ""
 
@@ -230,7 +230,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 
-#: src/application.vala:613
+#: src/application.vala:626
 msgid "Keep playing"
 msgstr ""
 

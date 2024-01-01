@@ -45,9 +45,21 @@ configure_file(output: 'config.h', configuration: conf)
 c_name = meson.project_name()
 res_name = c_name + '-resources'
 
+blueprints = custom_target('blueprints',
+  input: files(
+    'gtk/help-overlay.blp',
+    'gtk/play-panel.blp',
+    'gtk/preferences.blp',
+    'gtk/store-panel.blp',
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
+
 sources += gnome.compile_resources(res_name,
   'gresource.xml',
-  c_name: c_name
+  c_name: c_name,
+  dependencies: blueprints,
 )
 
 add_project_arguments('-I' + meson.current_source_dir () + '/gst/', language: 'c')
@@ -56,6 +68,7 @@ executable(c_name, sources,
   vala_args: [
     # meson.current_source_dir () + '/config.vapi',
     meson.current_source_dir () + '/gst/gst-ext.vapi',
+    '--gresourcesdir=src/',
   ],
   dependencies: dependencies,
   install: true,

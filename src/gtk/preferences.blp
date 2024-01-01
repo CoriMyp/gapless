@@ -1,0 +1,142 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $G4PreferencesWindow : Adw.PreferencesWindow {
+  default-width: 480;
+
+  Adw.PreferencesPage {
+    Adw.PreferencesGroup {
+      title: _("General");
+
+      Adw.ActionRow dark_theme {
+        icon-name: "night-light-symbolic";
+        title: _("Prefer dark theme");
+        activatable-widget: dark_btn;
+
+        Switch dark_btn {
+          valign: center;
+        }
+      }
+
+      Adw.ComboRow blur_row {
+        icon-name: "view-dual-symbolic";
+        title: _("Background blur mode");
+      }
+
+      Adw.ActionRow compact_list {
+        icon-name: "view-list-symbolic";
+        title: _("Compact playlist view");
+        activatable-widget: compact_btn;
+
+        Switch compact_btn {
+          valign: center;
+        }
+      }
+
+      Adw.ActionRow grid_mode {
+        icon-name: "view-grid-symbolic";
+        title: _("Grid view for artists/albums");
+        activatable-widget: grid_btn;
+
+        Switch grid_btn {
+          valign: center;
+        }
+      }
+
+      Adw.ActionRow {
+        icon-name: "media-playback-start-symbolic";
+        title: _("Keep playing after window closed");
+        activatable-widget: playbkgnd_btn;
+
+        Switch playbkgnd_btn {
+          valign: center;
+        }
+      }
+    }
+
+    Adw.PreferencesGroup {
+      title: _("Library");
+
+      Adw.ActionRow {
+        icon-name: "folder-symbolic";
+        title: _("Load music from folder");
+        activatable-widget: music_dir_btn;
+
+        Button music_dir_btn {
+          valign: center;
+        }
+      }
+
+      Adw.ActionRow {
+        icon-name: "software-update-available-symbolic";
+        title: _("Monitor local file changes");
+        activatable-widget: monitor_btn;
+
+        Switch monitor_btn {
+          valign: center;
+        }
+      }
+
+      Adw.ActionRow {
+        icon-name: "folder-remote-symbolic";
+        title: _("Load thumbnails for non-local files");
+        subtitle: _("May cause slowdowns and excess network usage");
+        activatable-widget: thumbnail_btn;
+
+        Switch thumbnail_btn {
+          valign: center;
+        }
+      }
+    }
+
+    Adw.PreferencesGroup {
+      title: _("Playback");
+
+      Adw.ExpanderRow peak_row {
+        icon-name: "edit-select-symbolic";
+        title: _("Show audio peak level");
+        show-enable-switch: true;
+
+        Adw.ActionRow peak_act_row {
+          title: _("Display characters");
+
+          Entry peak_entry {
+            margin-top: 4;
+            margin-bottom: 4;
+            max-length: 4;
+          }
+        }
+      }
+
+      Adw.ActionRow rotate_cover {
+        icon-name: "object-rotate-right-symbolic";
+        title: _("Rotate album cover");
+        activatable-widget: rotate_btn;
+
+        Switch rotate_btn {
+          valign: center;
+        }
+      }
+
+      Adw.ActionRow {
+        icon-name: "media-playlist-repeat-symbolic";
+        title: _("Enable gapless playback");
+        activatable-widget: gapless_btn;
+
+        Switch gapless_btn {
+          valign: center;
+        }
+      }
+
+      Adw.ComboRow replaygain_row {
+        icon-name: "audio-volume-high-symbolic";
+        title: _("Normalize volume with ReplayGain");
+      }
+
+      Adw.ComboRow audiosink_row {
+        icon-name: "audio-card-symbolic";
+        title: _("Prefer audio sink of GStreamer");
+      }
+    }
+  }
+}

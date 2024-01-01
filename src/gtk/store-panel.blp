@@ -1,0 +1,122 @@
+using Gtk 4.0;
+
+template $G4StorePanel : Box {
+  orientation: vertical;
+  hexpand: true;
+
+  HeaderBar header_bar {
+    hexpand: true;
+
+    styles [ "flat" ]
+
+    [title]
+    Label {
+      visible: false;
+    }
+
+    [end]
+    MenuButton {
+      icon-name: "open-menu-symbolic";
+      menu-model: primary_menu;
+      tooltip-text: _("Main Menu");
+    }
+
+    [end]
+    MenuButton sort_btn {
+      menu-model: sort_menu;
+      tooltip-text: _("Sort by");
+    }
+
+    [end]
+    ToggleButton search_btn {
+      icon-name: "edit-find-symbolic";
+      active: bind search_bar.search-mode-enabled bidirectional;
+      tooltip-text: _("Search");
+    }
+  }
+
+  SearchBar search_bar {
+    SearchEntry search_entry {
+      hexpand: true;
+    }
+  }
+
+  Overlay {
+    [overlay]
+    ProgressBar progress_bar {
+      hexpand: true;
+      valign: start;
+      pulse-step: 0.02;
+
+      styles ["osd"]
+    }
+
+    Stack stack_view {
+      width-request: 340;
+    }
+  }
+}
+
+menu primary_menu {
+  section {
+    item {
+      label: _("Reload Library");
+      action: "app.reload";
+    }
+
+    item {
+      label: _("Preferences");
+      action: "app.preferences";
+    }
+
+    item {
+      label: _("Keyboard Shortcuts");
+      action: "win.show-help-overlay";
+    }
+
+    item {
+      label: _("About");
+      action: "app.about";
+    }
+  }
+}
+
+menu sort_menu {
+  section {
+    item {
+      label: _("Album");
+      action: "app.sort";
+      target: "0";
+    }
+
+    item {
+      label: _("Artist");
+      action: "app.sort";
+      target: "1";
+    }
+
+    item {
+      label: _("Artist/Album");
+      action: "app.sort";
+      target: "2";
+    }
+
+    item {
+      label: _("Title");
+      action: "app.sort";
+      target: "3";
+    }
+
+    item {
+      label: _("Recent");
+      action: "app.sort";
+      target: "4";
+    }
+
+    item {
+      label: _("Shuffle");
+      action: "app.sort";
+      target: "5";
+    }
+  }
+}
