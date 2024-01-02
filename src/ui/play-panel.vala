@@ -18,8 +18,8 @@ namespace G4 {
         private unowned StableLabel music_title;
         [GtkChild]
         private unowned Gtk.Label initial_label;
-
-        private PlayBar _play_bar = new PlayBar ();
+        [GtkChild]
+        private unowned PlayBar play_bar;
 
         private Application _app;
         private int _cover_size = 480;
@@ -36,10 +36,7 @@ namespace G4 {
         public PlayPanel (Application app, Window win, Adw.Leaflet leaflet) {
             _app = app;
 
-            _play_bar.halign = Gtk.Align.FILL;
-            _play_bar.margin_bottom = 32;
-            _play_bar.position_seeked.connect (on_position_seeked);
-            append (_play_bar);
+            play_bar.position_seeked.connect (on_position_seeked);
 
             leaflet.bind_property ("folded", back_btn, "visible", BindingFlags.SYNC_CREATE);
             back_btn.clicked.connect (() => leaflet.navigate (Adw.NavigationDirection.BACK));
@@ -80,7 +77,7 @@ namespace G4 {
             set {
                 _rotate_cover = value;
                 _round_paintable.ratio = value ? 0.5 : 0.05;
-                _matrix_paintable.rotation = value ? _play_bar.position * _degrees_per_second : 0;
+                _matrix_paintable.rotation = value ? play_bar.position * _degrees_per_second : 0;
                 on_player_state_changed (_app.player.state);
             }
         }
@@ -110,9 +107,9 @@ namespace G4 {
             music_cover.margin_end = margin;
 
             margin -= 8;
-            _play_bar.margin_start = margin;
-            _play_bar.margin_end = margin;
-            _play_bar.on_size_changed (panel_width - margin * 2);
+            play_bar.margin_start = margin;
+            play_bar.margin_end = margin;
+            play_bar.on_size_changed (panel_width - margin * 2);
         }
 
         private void on_index_changed (int index, uint size) {
@@ -224,7 +221,7 @@ namespace G4 {
             }
             if (_show_peak) {
                 var peak = _app.player.peak;
-                _play_bar.peak = peak;
+                play_bar.peak = peak;
             }
             return true;
         }
