@@ -59,25 +59,10 @@ template $G4StorePanel : Box {
 
 menu primary_menu {
   section {
-    item {
-      label: _("Reload Library");
-      action: "app.reload";
-    }
-
-    item {
-      label: _("Preferences");
-      action: "app.preferences";
-    }
-
-    item {
-      label: _("Keyboard Shortcuts");
-      action: "win.show-help-overlay";
-    }
-
-    item {
-      label: _("About");
-      action: "app.about";
-    }
+    item (_("Reload Library"), "app.reload")
+    item (_("Preferences"), "app.preferences")
+    item (_("Keyboard Shortcuts"), "win.show-help-overlay")
+    item (_("About"), "app.about")
   }
 }
 
