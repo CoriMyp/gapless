@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: g4music master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 22:28+0100\n"
+"POT-Creation-Date: 2024-01-02 11:05+0100\n"
 "PO-Revision-Date: 2023-09-23 18:28+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
@@ -93,6 +93,22 @@ msgstr "Rendezés be- és kikapcsolása"
 msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr "Gyűjtemény újratöltése"
+
+#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:61
+msgid "Play Previous"
+msgstr "Előző lejátszása"
+
+#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:70
+msgid "Play/Pause"
+msgstr "Lejátszás vagy szüneteltetés"
+
+#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:81
+msgid "Play Next"
+msgstr "Következő lejátszása"
+
+#: src/gtk/play-bar.blp:52
+msgid "Single Loop"
+msgstr "Ismételt lejátszás"
 
 #: src/gtk/play-panel.blp:15 src/ui/store-panel.vala:340
 msgid "Back"
@@ -278,24 +294,6 @@ msgstr "Előadó keresése"
 #: src/ui/music-widgets.vala:312
 msgid "_Show Music File"
 msgstr "_Zenefájl megjelenítése"
-
-#. Translators: single loop the current music
-#: src/ui/play-bar.vala:74
-msgid "Single Loop"
-msgstr "Ismételt lejátszás"
-
-#: src/ui/play-bar.vala:84
-msgid "Play Previous"
-msgstr "Előző lejátszása"
-
-#. media-playback-pause-symbolic
-#: src/ui/play-bar.vala:90
-msgid "Play/Pause"
-msgstr "Lejátszás vagy szüneteltetés"
-
-#: src/ui/play-bar.vala:97
-msgid "Play Next"
-msgstr "Következő lejátszása"
 
 #: src/ui/play-panel.vala:280
 msgid ""

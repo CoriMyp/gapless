@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 22:28+0100\n"
+"POT-Creation-Date: 2024-01-02 11:05+0100\n"
 "PO-Revision-Date: 2023-12-31 18:21+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
@@ -93,6 +93,22 @@ msgstr "Alternar sens de triada"
 msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr "Recargar la lista"
+
+#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:61
+msgid "Play Previous"
+msgstr "Legir la precedenta"
+
+#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:70
+msgid "Play/Pause"
+msgstr "Lectura/Pausa"
+
+#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:81
+msgid "Play Next"
+msgstr "Legir la seguenta"
+
+#: src/gtk/play-bar.blp:52
+msgid "Single Loop"
+msgstr "Bocla simpla"
 
 #: src/gtk/play-panel.blp:15 src/ui/store-panel.vala:340
 msgid "Back"
@@ -278,24 +294,6 @@ msgstr "Recercar d’artistas"
 #: src/ui/music-widgets.vala:312
 msgid "_Show Music File"
 msgstr "_Afichar fichièr musical"
-
-#. Translators: single loop the current music
-#: src/ui/play-bar.vala:74
-msgid "Single Loop"
-msgstr "Bocla simpla"
-
-#: src/ui/play-bar.vala:84
-msgid "Play Previous"
-msgstr "Legir la precedenta"
-
-#. media-playback-pause-symbolic
-#: src/ui/play-bar.vala:90
-msgid "Play/Pause"
-msgstr "Lectura/Pausa"
-
-#: src/ui/play-bar.vala:97
-msgid "Play Next"
-msgstr "Legir la seguenta"
 
 #: src/ui/play-panel.vala:280
 msgid ""

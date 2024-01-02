@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: g4music master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 22:28+0100\n"
+"POT-Creation-Date: 2024-01-02 11:05+0100\n"
 "PO-Revision-Date: 2023-10-17 20:11+0300\n"
 "Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
@@ -96,6 +96,22 @@ msgstr "Пераключыць сартаванне"
 msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr "Абнавіць бібліятэку"
+
+#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:61
+msgid "Play Previous"
+msgstr "Папярэдняя дарожка"
+
+#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:70
+msgid "Play/Pause"
+msgstr "Прайграванне/паўза"
+
+#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:81
+msgid "Play Next"
+msgstr "Наступная дарожка"
+
+#: src/gtk/play-bar.blp:52
+msgid "Single Loop"
+msgstr "Паўтор адной песні"
 
 #: src/gtk/play-panel.blp:15 src/ui/store-panel.vala:340
 msgid "Back"
@@ -281,24 +297,6 @@ msgstr "Пошук па выканаўцу"
 #: src/ui/music-widgets.vala:312
 msgid "_Show Music File"
 msgstr "_Паказаць размяшчэнне файла"
-
-#. Translators: single loop the current music
-#: src/ui/play-bar.vala:74
-msgid "Single Loop"
-msgstr "Паўтор адной песні"
-
-#: src/ui/play-bar.vala:84
-msgid "Play Previous"
-msgstr "Папярэдняя дарожка"
-
-#. media-playback-pause-symbolic
-#: src/ui/play-bar.vala:90
-msgid "Play/Pause"
-msgstr "Прайграванне/паўза"
-
-#: src/ui/play-bar.vala:97
-msgid "Play Next"
-msgstr "Наступная дарожка"
 
 #: src/ui/play-panel.vala:280
 msgid ""

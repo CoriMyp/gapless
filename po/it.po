@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 22:28+0100\n"
+"POT-Creation-Date: 2024-01-02 11:05+0100\n"
 "PO-Revision-Date: 2023-08-14 12:29+0200\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -92,6 +92,22 @@ msgstr "Cambia l'ordine"
 msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr "Ricarica libreria"
+
+#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:61
+msgid "Play Previous"
+msgstr "Riproduci precedente"
+
+#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:70
+msgid "Play/Pause"
+msgstr "Riproduci/Pausa"
+
+#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:81
+msgid "Play Next"
+msgstr "Riproduci prossimo"
+
+#: src/gtk/play-bar.blp:52
+msgid "Single Loop"
+msgstr ""
 
 #: src/gtk/play-panel.blp:15 src/ui/store-panel.vala:340
 msgid "Back"
@@ -279,24 +295,6 @@ msgstr "Cerca artista"
 #: src/ui/music-widgets.vala:312
 msgid "_Show Music File"
 msgstr "_Mostra file musicali"
-
-#. Translators: single loop the current music
-#: src/ui/play-bar.vala:74
-msgid "Single Loop"
-msgstr ""
-
-#: src/ui/play-bar.vala:84
-msgid "Play Previous"
-msgstr "Riproduci precedente"
-
-#. media-playback-pause-symbolic
-#: src/ui/play-bar.vala:90
-msgid "Play/Pause"
-msgstr "Riproduci/Pausa"
-
-#: src/ui/play-bar.vala:97
-msgid "Play Next"
-msgstr "Riproduci prossimo"
 
 #: src/ui/play-panel.vala:280
 msgid ""

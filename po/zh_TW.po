@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: g4music\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 22:28+0100\n"
+"POT-Creation-Date: 2024-01-02 11:05+0100\n"
 "PO-Revision-Date: 2023-08-19 12:12+0800\n"
 "Last-Translator: Nanling <neithern@outlook.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
@@ -96,6 +96,22 @@ msgstr "切換排序"
 msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr "更新音樂庫"
+
+#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:61
+msgid "Play Previous"
+msgstr "播放上一首"
+
+#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:70
+msgid "Play/Pause"
+msgstr "播放/暫停"
+
+#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:81
+msgid "Play Next"
+msgstr "播放下一首"
+
+#: src/gtk/play-bar.blp:52
+msgid "Single Loop"
+msgstr "單曲迴圈"
 
 #: src/gtk/play-panel.blp:15 src/ui/store-panel.vala:340
 msgid "Back"
@@ -283,24 +299,6 @@ msgstr "搜尋藝術家"
 #: src/ui/music-widgets.vala:312
 msgid "_Show Music File"
 msgstr "顯示音樂檔案(_S)"
-
-#. Translators: single loop the current music
-#: src/ui/play-bar.vala:74
-msgid "Single Loop"
-msgstr "單曲迴圈"
-
-#: src/ui/play-bar.vala:84
-msgid "Play Previous"
-msgstr "播放上一首"
-
-#. media-playback-pause-symbolic
-#: src/ui/play-bar.vala:90
-msgid "Play/Pause"
-msgstr "播放/暫停"
-
-#: src/ui/play-bar.vala:97
-msgid "Play Next"
-msgstr "播放下一首"
 
 #: src/ui/play-panel.vala:280
 msgid ""

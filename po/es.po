@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: g4music\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 22:28+0100\n"
+"POT-Creation-Date: 2024-01-02 11:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Radi4Ever <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish <LL@li.org>\n"
@@ -93,6 +93,22 @@ msgstr "Cambiar Orden"
 msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr "Recargar Biblioteca"
+
+#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:61
+msgid "Play Previous"
+msgstr "Reproducir Anterior"
+
+#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:70
+msgid "Play/Pause"
+msgstr "Reproducir/Pausar"
+
+#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:81
+msgid "Play Next"
+msgstr "Reproducir Siguiente"
+
+#: src/gtk/play-bar.blp:52
+msgid "Single Loop"
+msgstr ""
 
 #: src/gtk/play-panel.blp:15 src/ui/store-panel.vala:340
 msgid "Back"
@@ -282,24 +298,6 @@ msgstr "Buscar Artista"
 #: src/ui/music-widgets.vala:312
 msgid "_Show Music File"
 msgstr "_Mostrar Archivo de Pista"
-
-#. Translators: single loop the current music
-#: src/ui/play-bar.vala:74
-msgid "Single Loop"
-msgstr ""
-
-#: src/ui/play-bar.vala:84
-msgid "Play Previous"
-msgstr "Reproducir Anterior"
-
-#. media-playback-pause-symbolic
-#: src/ui/play-bar.vala:90
-msgid "Play/Pause"
-msgstr "Reproducir/Pausar"
-
-#: src/ui/play-bar.vala:97
-msgid "Play Next"
-msgstr "Reproducir Siguiente"
 
 #: src/ui/play-panel.vala:280
 msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 22:28+0100\n"
+"POT-Creation-Date: 2024-01-02 11:05+0100\n"
 "PO-Revision-Date: 2023-08-19 19:04+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: \n"
@@ -94,6 +94,22 @@ msgstr "Переключить сортировку"
 msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr "Перезагрузить библиотеку"
+
+#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:61
+msgid "Play Previous"
+msgstr "Воспроизвести предыдущую"
+
+#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:70
+msgid "Play/Pause"
+msgstr "Воспроизведение/Пауза"
+
+#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:81
+msgid "Play Next"
+msgstr "Воспроизвести следующую"
+
+#: src/gtk/play-bar.blp:52
+msgid "Single Loop"
+msgstr "Зациклить повторение на одной"
 
 #: src/gtk/play-panel.blp:15 src/ui/store-panel.vala:340
 msgid "Back"
@@ -280,24 +296,6 @@ msgstr "Поиск исполнителя"
 #: src/ui/music-widgets.vala:312
 msgid "_Show Music File"
 msgstr "_Показать музыкальный файл"
-
-#. Translators: single loop the current music
-#: src/ui/play-bar.vala:74
-msgid "Single Loop"
-msgstr "Зациклить повторение на одной"
-
-#: src/ui/play-bar.vala:84
-msgid "Play Previous"
-msgstr "Воспроизвести предыдущую"
-
-#. media-playback-pause-symbolic
-#: src/ui/play-bar.vala:90
-msgid "Play/Pause"
-msgstr "Воспроизведение/Пауза"
-
-#: src/ui/play-bar.vala:97
-msgid "Play Next"
-msgstr "Воспроизвести следующую"
 
 #: src/ui/play-panel.vala:280
 msgid ""

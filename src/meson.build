@@ -48,6 +48,9 @@ res_name = c_name + '-resources'
 blueprints = custom_target('blueprints',
   input: files(
     'gtk/help-overlay.blp',
+    'gtk/mini-bar.blp',
+    'gtk/music-list.blp',
+    'gtk/play-bar.blp',
     'gtk/play-panel.blp',
     'gtk/preferences.blp',
     'gtk/store-panel.blp',

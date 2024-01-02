@@ -1,5 +1,8 @@
 data/app.desktop.in
 src/gtk/help-overlay.blp
+src/gtk/mini-bar.blp
+src/gtk/music-list.blp
+src/gtk/play-bar.blp
 src/gtk/play-panel.blp
 src/gtk/preferences.blp
 src/gtk/store-panel.blp
