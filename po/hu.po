@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: g4music master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-02 11:05+0100\n"
+"POT-Creation-Date: 2024-01-16 20:36+0100\n"
 "PO-Revision-Date: 2023-09-23 18:28+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
@@ -94,19 +94,19 @@ msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr "Gyűjtemény újratöltése"
 
-#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:61
+#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:62
 msgid "Play Previous"
 msgstr "Előző lejátszása"
 
-#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:70
+#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:71
 msgid "Play/Pause"
 msgstr "Lejátszás vagy szüneteltetés"
 
-#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:81
+#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:82
 msgid "Play Next"
 msgstr "Következő lejátszása"
 
-#: src/gtk/play-bar.blp:52
+#: src/gtk/play-bar.blp:53
 msgid "Single Loop"
 msgstr "Ismételt lejátszás"
 
@@ -199,47 +199,47 @@ msgstr "Rendezési sorrend"
 msgid "Search"
 msgstr "Keresés"
 
-#: src/gtk/store-panel.blp:63
+#: src/gtk/store-panel.blp:62
 #, fuzzy
 msgid "Reload Library"
 msgstr "Gyűjtemény újratöltése"
 
-#: src/gtk/store-panel.blp:68
+#: src/gtk/store-panel.blp:63
 #, fuzzy
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: src/gtk/store-panel.blp:73
+#: src/gtk/store-panel.blp:64
 #, fuzzy
 msgid "Keyboard Shortcuts"
 msgstr "_Gyorsbillentyűk"
 
-#: src/gtk/store-panel.blp:78
+#: src/gtk/store-panel.blp:65
 #, fuzzy
 msgid "About"
 msgstr "_Névjegy"
 
-#: src/gtk/store-panel.blp:87 src/ui/preferences.vala:67
+#: src/gtk/store-panel.blp:72 src/ui/preferences.vala:67
 msgid "Album"
 msgstr "Album"
 
-#: src/gtk/store-panel.blp:93
+#: src/gtk/store-panel.blp:78
 msgid "Artist"
 msgstr "Előadó"
 
-#: src/gtk/store-panel.blp:99
+#: src/gtk/store-panel.blp:84
 msgid "Artist/Album"
 msgstr "Előadó és album"
 
-#: src/gtk/store-panel.blp:105
+#: src/gtk/store-panel.blp:90
 msgid "Title"
 msgstr "Cím"
 
-#: src/gtk/store-panel.blp:111
+#: src/gtk/store-panel.blp:96
 msgid "Recent"
 msgstr "Legutóbbi"
 
-#: src/gtk/store-panel.blp:117
+#: src/gtk/store-panel.blp:102
 msgid "Shuffle"
 msgstr "Keverés"
 
@@ -257,45 +257,45 @@ msgid "Keep playing"
 msgstr "Lejátszás folytatása"
 
 #. Translators: Play this music at next position of current playing music
-#: src/ui/music-widgets.vala:252 src/ui/music-widgets.vala:293
-#: src/ui/music-widgets.vala:303
+#: src/ui/music-widgets.vala:257 src/ui/music-widgets.vala:298
+#: src/ui/music-widgets.vala:308
 msgid "Play at Next"
 msgstr "Lejátszás a következőnél"
 
-#: src/ui/music-widgets.vala:253 src/ui/music-widgets.vala:292
-#: src/ui/music-widgets.vala:302 src/ui/store-panel.vala:345
+#: src/ui/music-widgets.vala:258 src/ui/music-widgets.vala:297
+#: src/ui/music-widgets.vala:307 src/ui/store-panel.vala:345
 msgid "Play"
 msgstr "Lejátszás"
 
-#: src/ui/music-widgets.vala:256 src/ui/play-panel.vala:237
+#: src/ui/music-widgets.vala:261 src/ui/play-panel.vala:234
 msgid "Show _Cover File"
 msgstr "_Borítófájl megjelenítése"
 
-#: src/ui/music-widgets.vala:258 src/ui/play-panel.vala:239
+#: src/ui/music-widgets.vala:263 src/ui/play-panel.vala:236
 msgid "_Export Cover"
 msgstr "Borító _exportálása"
 
-#: src/ui/music-widgets.vala:295
+#: src/ui/music-widgets.vala:300
 msgid "Show List File"
 msgstr "Listafájl megjelenítése"
 
-#: src/ui/music-widgets.vala:309 src/ui/play-panel.vala:56
+#: src/ui/music-widgets.vala:314 src/ui/play-panel.vala:53
 msgid "Search Title"
 msgstr "Cím keresése"
 
-#: src/ui/music-widgets.vala:310 src/ui/play-panel.vala:54
+#: src/ui/music-widgets.vala:315 src/ui/play-panel.vala:51
 msgid "Search Album"
 msgstr "Album keresése"
 
-#: src/ui/music-widgets.vala:311 src/ui/play-panel.vala:55
+#: src/ui/music-widgets.vala:316 src/ui/play-panel.vala:52
 msgid "Search Artist"
 msgstr "Előadó keresése"
 
-#: src/ui/music-widgets.vala:312
+#: src/ui/music-widgets.vala:317
 msgid "_Show Music File"
 msgstr "_Zenefájl megjelenítése"
 
-#: src/ui/play-panel.vala:280
+#: src/ui/play-panel.vala:277
 msgid ""
 "Drag and drop music files here,\n"
 "or change music location: "
