@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-26 21:16+0800\n"
+"POT-Creation-Date: 2024-01-16 20:36+0100\n"
 "PO-Revision-Date: 2023-08-14 12:29+0200\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: data/app.desktop.in:3 src/application.vala:225 src/main.vala:24
+#: data/app.desktop.in:3 src/application.vala:235 src/main.vala:24
 msgid "G4Music"
 msgstr "G4Music"
 
@@ -33,253 +33,270 @@ msgstr "Riproduci musica"
 msgid "music;sound;player;media;audio;playlist;"
 msgstr "musica;suono;lettore;media;audio;playlist;"
 
-#: src/gtk/help-overlay.ui:11
+#: src/gtk/help-overlay.blp:11
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Generale"
 
-#: src/gtk/help-overlay.ui:14
+#: src/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr "Mostra scorciatoie"
 
-#: src/gtk/help-overlay.ui:20
+#: src/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Preferenze"
 
-#: src/gtk/help-overlay.ui:26
+#: src/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Esci"
 
-#: src/gtk/help-overlay.ui:34
+#: src/gtk/help-overlay.blp:30
 msgctxt "shortcut window"
 msgid "Playback"
 msgstr "Riproduzione"
 
-#: src/gtk/help-overlay.ui:37
+#: src/gtk/help-overlay.blp:33
 msgctxt "shortcut window"
 msgid "Play/Pause"
 msgstr "Riproduci/Pausa"
 
-#: src/gtk/help-overlay.ui:43
+#: src/gtk/help-overlay.blp:38
 msgctxt "shortcut window"
 msgid "Play Next"
 msgstr "Riproduci prossimo"
 
-#: src/gtk/help-overlay.ui:49
+#: src/gtk/help-overlay.blp:43
 msgctxt "shortcut window"
 msgid "Play Previous"
 msgstr "Riproduci precedente"
 
-#: src/gtk/help-overlay.ui:57
+#: src/gtk/help-overlay.blp:49
 msgctxt "shortcut window"
 msgid "Playlist"
 msgstr "Riproduci"
 
-#: src/gtk/help-overlay.ui:60
+#: src/gtk/help-overlay.blp:52
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "Cerca"
 
-#: src/gtk/help-overlay.ui:66
+#: src/gtk/help-overlay.blp:57
 msgctxt "shortcut window"
 msgid "Toggle Sort"
 msgstr "Cambia l'ordine"
 
-#: src/gtk/help-overlay.ui:72
+#: src/gtk/help-overlay.blp:62
 msgctxt "shortcut window"
 msgid "Reload Library"
 msgstr "Ricarica libreria"
 
-#: src/gtk/play-panel.ui:16 src/ui/store-panel.vala:290
+#: src/gtk/mini-bar.blp:51 src/gtk/play-bar.blp:62
+msgid "Play Previous"
+msgstr "Riproduci precedente"
+
+#: src/gtk/mini-bar.blp:60 src/gtk/play-bar.blp:71
+msgid "Play/Pause"
+msgstr "Riproduci/Pausa"
+
+#: src/gtk/mini-bar.blp:69 src/gtk/play-bar.blp:82
+msgid "Play Next"
+msgstr "Riproduci prossimo"
+
+#: src/gtk/play-bar.blp:53
+msgid "Single Loop"
+msgstr ""
+
+#: src/gtk/play-panel.blp:15 src/ui/store-panel.vala:340
 msgid "Back"
 msgstr "Indietro"
 
-#: src/gtk/preferences.ui:10
+#: src/gtk/preferences.blp:9
 msgid "General"
 msgstr "Generale"
 
-#: src/gtk/preferences.ui:14
+#: src/gtk/preferences.blp:13
 msgid "Prefer dark theme"
 msgstr "Preferisci il tema scuro"
 
-#: src/gtk/preferences.ui:26
+#: src/gtk/preferences.blp:23
 msgid "Background blur mode"
 msgstr "Applica blur allo sfondo"
 
-#: src/gtk/preferences.ui:32
+#: src/gtk/preferences.blp:28
 msgid "Compact playlist view"
 msgstr "Visualizza playlist compatta"
 
-#: src/gtk/preferences.ui:44 src/application.vala:424
+#: src/gtk/preferences.blp:38
+msgid "Grid view for artists/albums"
+msgstr ""
+
+#: src/gtk/preferences.blp:48 src/application.vala:435
 msgid "Keep playing after window closed"
 msgstr "Continua a riprodurre dopo aver chiuso la finestra"
 
-#: src/gtk/preferences.ui:57
+#: src/gtk/preferences.blp:58
 msgid "Library"
 msgstr "Libreria"
 
-#: src/gtk/preferences.ui:61
+#: src/gtk/preferences.blp:62
 msgid "Load music from folder"
 msgstr "Carica musica dalla cartella"
 
-#: src/gtk/preferences.ui:73
+#: src/gtk/preferences.blp:72
 msgid "Monitor local file changes"
 msgstr "Monitora cambiamenti dei file locali"
 
-#: src/gtk/preferences.ui:85
+#: src/gtk/preferences.blp:82
 msgid "Load thumbnails for non-local files"
 msgstr "Carica miniature per file non locali"
 
-#: src/gtk/preferences.ui:86
+#: src/gtk/preferences.blp:83
 msgid "May cause slowdowns and excess network usage"
 msgstr "Potrebbe causare rallentamenti e un uso della rete eccessivo"
 
-#: src/gtk/preferences.ui:99
+#: src/gtk/preferences.blp:93
 msgid "Playback"
 msgstr "Riproduci"
 
-#: src/gtk/preferences.ui:103
+#: src/gtk/preferences.blp:97
 msgid "Show audio peak level"
 msgstr "Mostra il livello di picco dell'audio"
 
-#: src/gtk/preferences.ui:107
+#: src/gtk/preferences.blp:101
 msgid "Display characters"
 msgstr "Mostra caratteri"
 
-#: src/gtk/preferences.ui:122
+#: src/gtk/preferences.blp:113
 msgid "Rotate album cover"
 msgstr "Ruota copertina album"
 
-#: src/gtk/preferences.ui:134
+#: src/gtk/preferences.blp:123
 msgid "Enable gapless playback"
 msgstr "Abilita la riproduzione senza interruzioni"
 
-#: src/gtk/preferences.ui:146
+#: src/gtk/preferences.blp:133
 msgid "Normalize volume with ReplayGain"
 msgstr "Usa ReplayGain per normalizzare il volume"
 
-#: src/gtk/preferences.ui:152
-msgid "Prefer audio sink"
+#: src/gtk/preferences.blp:138
+#, fuzzy
+msgid "Prefer audio sink of GStreamer"
 msgstr "Audio sink preferito"
 
-#: src/gtk/store-panel.ui:22
+#: src/gtk/store-panel.blp:21
 msgid "Main Menu"
 msgstr "Menu principale"
 
-#: src/gtk/store-panel.ui:28
-msgid "Sort By"
+#: src/gtk/store-panel.blp:27
+#, fuzzy
+msgid "Sort by"
 msgstr "Ordina per"
 
-#: src/gtk/store-panel.ui:35
+#: src/gtk/store-panel.blp:34
 msgid "Search"
 msgstr "Cerca"
 
-#: src/gtk/store-panel.ui:73
-msgid "_Reload Library"
-msgstr "_Ricarica libreria"
+#: src/gtk/store-panel.blp:62
+#, fuzzy
+msgid "Reload Library"
+msgstr "Ricarica libreria"
 
-#: src/gtk/store-panel.ui:79
-msgid "_Preferences"
-msgstr "_Preferenze"
+#: src/gtk/store-panel.blp:63
+#, fuzzy
+msgid "Preferences"
+msgstr "Preferenze"
 
-#: src/gtk/store-panel.ui:83
-msgid "_Keyboard Shortcuts"
+#: src/gtk/store-panel.blp:64
+#, fuzzy
+msgid "Keyboard Shortcuts"
 msgstr "_Scorciatoie da tastiera"
 
-#: src/gtk/store-panel.ui:87
-msgid "_About"
+#: src/gtk/store-panel.blp:65
+#, fuzzy
+msgid "About"
 msgstr "_Informazioni"
 
-#: src/gtk/store-panel.ui:96 src/ui/preferences.vala:64
+#: src/gtk/store-panel.blp:72 src/ui/preferences.vala:67
 msgid "Album"
 msgstr "Album"
 
-#: src/gtk/store-panel.ui:101
+#: src/gtk/store-panel.blp:78
 msgid "Artist"
 msgstr "Artista"
 
-#: src/gtk/store-panel.ui:106
+#: src/gtk/store-panel.blp:84
 msgid "Artist/Album"
 msgstr "Artista/Album"
 
-#: src/gtk/store-panel.ui:111
+#: src/gtk/store-panel.blp:90
 msgid "Title"
 msgstr "Titolo"
 
-#: src/gtk/store-panel.ui:116
+#: src/gtk/store-panel.blp:96
 msgid "Recent"
 msgstr "Recente"
 
-#: src/gtk/store-panel.ui:121
+#: src/gtk/store-panel.blp:102
 msgid "Shuffle"
 msgstr "Mescola"
 
-#: src/action-handles.vala:188
+#: src/action-handles.vala:184
 msgid "A fast, fluent, light weight music player written in GTK4."
 msgstr "Un lettore musicale veloce, scorrevole e leggero scritto in GTK4."
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/action-handles.vala:190
+#: src/action-handles.vala:186
 msgid "translator-credits"
 msgstr "Albano Battistella, Mek101"
 
-#: src/application.vala:573
+#: src/application.vala:626
 msgid "Keep playing"
 msgstr "Continuare a riprodurre"
 
-#: src/ui/music-widgets.vala:232 src/ui/music-widgets.vala:260
+#. Translators: Play this music at next position of current playing music
+#: src/ui/music-widgets.vala:257 src/ui/music-widgets.vala:298
+#: src/ui/music-widgets.vala:308
 msgid "Play at Next"
 msgstr "Riproduci il prossimo"
 
-#: src/ui/music-widgets.vala:233 src/ui/music-widgets.vala:259
+#: src/ui/music-widgets.vala:258 src/ui/music-widgets.vala:297
+#: src/ui/music-widgets.vala:307 src/ui/store-panel.vala:345
 msgid "Play"
 msgstr "Riproduci"
 
-#: src/ui/music-widgets.vala:236 src/ui/play-panel.vala:222
+#: src/ui/music-widgets.vala:261 src/ui/play-panel.vala:234
 msgid "Show _Cover File"
 msgstr "Mostra file copertina"
 
-#: src/ui/music-widgets.vala:238 src/ui/play-panel.vala:224
+#: src/ui/music-widgets.vala:263 src/ui/play-panel.vala:236
 msgid "_Export Cover"
 msgstr "Exporta Cover"
 
-#: src/ui/music-widgets.vala:266 src/ui/play-panel.vala:56
+#: src/ui/music-widgets.vala:300
+#, fuzzy
+msgid "Show List File"
+msgstr "_Mostra file musicali"
+
+#: src/ui/music-widgets.vala:314 src/ui/play-panel.vala:53
 msgid "Search Title"
 msgstr "Cerca titolo"
 
-#: src/ui/music-widgets.vala:267 src/ui/play-panel.vala:54
+#: src/ui/music-widgets.vala:315 src/ui/play-panel.vala:51
 msgid "Search Album"
 msgstr "Cerca album"
 
-#: src/ui/music-widgets.vala:268 src/ui/play-panel.vala:55
+#: src/ui/music-widgets.vala:316 src/ui/play-panel.vala:52
 msgid "Search Artist"
 msgstr "Cerca artista"
 
-#: src/ui/music-widgets.vala:269
+#: src/ui/music-widgets.vala:317
 msgid "_Show Music File"
 msgstr "_Mostra file musicali"
 
-#: src/ui/play-bar.vala:75
-msgid "Repeat Music"
-msgstr "Ripeti canzone"
-
-#: src/ui/play-bar.vala:85
-msgid "Play Previous"
-msgstr "Riproduci precedente"
-
-#. media-playback-pause-symbolic
-#: src/ui/play-bar.vala:91
-msgid "Play/Pause"
-msgstr "Riproduci/Pausa"
-
-#: src/ui/play-bar.vala:98
-msgid "Play Next"
-msgstr "Riproduci prossimo"
-
-#: src/ui/play-panel.vala:263
+#: src/ui/play-panel.vala:277
 msgid ""
 "Drag and drop music files here,\n"
 "or change music location: "
@@ -287,36 +304,43 @@ msgstr ""
 "Trascina e rilascia i file delle canzoni qui,\n"
 "oppure cambia la posizione della libreria: "
 
-#: src/ui/preferences.vala:44 src/ui/preferences.vala:64
+#: src/ui/preferences.vala:46 src/ui/preferences.vala:67
 msgid "Never"
 msgstr "Mai"
 
-#: src/ui/preferences.vala:44
+#: src/ui/preferences.vala:46
 msgid "Always"
 msgstr "Sempre"
 
-#: src/ui/preferences.vala:44
+#: src/ui/preferences.vala:46
 msgid "Art Only"
 msgstr "Solo alla copertina"
 
-#: src/ui/preferences.vala:64
+#: src/ui/preferences.vala:67
 msgid "Track"
 msgstr "Traccia"
 
-#: src/ui/store-panel.vala:66
+#: src/ui/store-panel.vala:74
 msgid "Playing"
 msgstr "Riprodurre"
 
-#: src/ui/store-panel.vala:72
+#: src/ui/store-panel.vala:79
 msgid "Artists"
 msgstr "Artisti"
 
-#: src/ui/store-panel.vala:77
+#: src/ui/store-panel.vala:84
 msgid "Albums"
 msgstr "Album"
 
-#: src/ui/volume-button.vala:32
-msgid "Volume: "
+#: src/ui/store-panel.vala:374
+#, fuzzy
+msgid "Playlists"
+msgstr "Riproduci"
+
+#. Translators: Current volume percent: 0~100%
+#: src/ui/volume-button.vala:33
+#, fuzzy, c-format
+msgid "Volume %d%%"
 msgstr "Volume: "
 
 #: src/utils/music.vala:2
@@ -326,6 +350,15 @@ msgstr "Album sconosciuto"
 #: src/utils/music.vala:3
 msgid "Unknown Artist"
 msgstr "Artista sconosciuto"
+
+#~ msgid "_Reload Library"
+#~ msgstr "_Ricarica libreria"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Preferenze"
+
+#~ msgid "Repeat Music"
+#~ msgstr "Ripeti canzone"
 
 #~ msgid "Appearance"
 #~ msgstr "Aspetto"
@@ -341,4 +374,3 @@ msgstr "Artista sconosciuto"
 
 #~ msgid "Loading..."
 #~ msgstr "Caricamento in corso..."
-

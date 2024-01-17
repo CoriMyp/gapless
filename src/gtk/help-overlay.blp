@@ -1,0 +1,67 @@
+using Gtk 4.0;
+
+ShortcutsWindow help_overlay {
+  modal: true;
+
+  ShortcutsSection {
+    section-name: "shortcuts";
+    max-height: 10;
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "General");
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Show Shortcuts");
+        action-name: "win.show-help-overlay";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Preferences");
+        action-name: "app.preferences";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Quit");
+        action-name: "app.quit";
+      }
+    }
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "Playback");
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Play/Pause");
+        action-name: "app.play-pause";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Play Next");
+        action-name: "app.next";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Play Previous");
+        action-name: "app.prev";
+      }
+    }
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "Playlist");
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Search");
+        action-name: "app.toggle-search";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Toggle Sort");
+        action-name: "app.toggle-sort";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Reload Library");
+        action-name: "app.reload";
+      }
+    }
+  }
+}

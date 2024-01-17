@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/github/neithern/g4music">
-    <file alias="style.css">gtk/style.css</file>
-    <file>gtk/help-overlay.ui</file>
-    <file>gtk/play-panel.ui</file>
-    <file>gtk/preferences.ui</file>
-    <file>gtk/store-panel.ui</file>
+    <file alias="style.css" compressed="true">gtk/style.css</file>
+    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file preprocess="xml-stripblanks">gtk/mini-bar.ui</file>
+    <file preprocess="xml-stripblanks">gtk/music-list.ui</file>
+    <file preprocess="xml-stripblanks">gtk/play-bar.ui</file>
+    <file preprocess="xml-stripblanks">gtk/play-panel.ui</file>
+    <file preprocess="xml-stripblanks">gtk/preferences.ui</file>
+    <file preprocess="xml-stripblanks">gtk/store-panel.ui</file>
   </gresource>
 </gresources>

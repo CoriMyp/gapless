@@ -1,0 +1,74 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $G4MiniBar : Adw.ActionRow {
+  halign: fill;
+  hexpand: true;
+  height-request: 60;
+
+  [prefix]
+  Box {
+    orientation: vertical;
+    halign: start;
+    hexpand: true;
+    valign: center;
+    spacing: 6;
+
+    Label title_label {
+      label: "---";
+      halign: start;
+      ellipsize: end;
+
+      styles ["title-leading"]
+    }
+
+    Label time {
+      halign: start;
+      label: "0:00";
+
+      styles ["dim-label", "numeric"]
+    }
+  }
+
+  [prefix]
+  Image cover_img {
+    valign: center;
+    margin-start: 2;
+    margin-end: 6;
+    pixel-size: 40;
+  }
+
+  [suffix]
+  Box {
+    orientation: horizontal;
+    spacing: 4;
+    valign: center;
+
+    Button prev {
+      valign: center;
+      action-name: "app.prev";
+      icon-name: "media-skip-backward-symbolic";
+      tooltip-text: _("Play Previous");
+
+      styles ["circular", "flat"]
+    }
+
+    Button play {
+      valign: center;
+      action-name: "app.play-pause";
+      icon-name: "media-playback-start-symbolic";
+      tooltip-text: _("Play/Pause");
+
+      styles ["circular", "flat"]
+    }
+
+    Button next {
+      valign: center;
+      action-name: "app.next";
+      icon-name: "media-skip-forward-symbolic";
+      tooltip-text: _("Play Next");
+
+      styles ["circular", "flat"]
+    }
+  }
+}

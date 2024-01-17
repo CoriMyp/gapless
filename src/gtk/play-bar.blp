@@ -1,0 +1,91 @@
+using Gtk 4.0;
+
+template $G4PlayBar : Box {
+  orientation: vertical;
+
+  Scale seek {
+    orientation: horizontal;
+    halign: fill;
+  }
+
+  Overlay {
+    [overlay]
+    $G4PeakBar peak_bar {
+      align: center;
+      halign: center;
+      width-request: 168;
+
+      styles ["dim-label"]
+    }
+
+    CenterBox {
+      baseline-position: center;
+      halign: fill;
+
+      [start]
+      Label positive {
+        label: "0:00";
+        halign: start;
+        margin-start: 12;
+
+        styles ["dim-label", "numeric"]
+      }
+
+      [end]
+      Label negative {
+        label: "0:00";
+        halign: end;
+        margin-end: 12;
+
+        styles ["dim-label", "numeric"]
+      }
+    }
+  }
+
+  Box {
+    orientation: horizontal;
+    spacing: 16;
+    halign: center;
+
+    ToggleButton repeat {
+      icon-name: "media-playlist-repeat-symbolic";
+      valign: center;
+      tooltip-text: _("Single Loop");
+
+      styles ["flat"]
+    }
+
+    Button prev {
+      icon-name: "media-skip-backward-symbolic";
+      valign: center;
+      action-name: "app.prev";
+      tooltip-text: _("Play Previous");
+
+      styles ["circular"]
+    }
+
+    Button play {
+      icon-name: "media-playback-start-symbolic";
+      valign: center;
+      action-name: "app.play-pause";
+      tooltip-text: _("Play/Pause");
+      width-request: 48;
+      height-request: 48;
+
+      styles ["circular"]
+    }
+
+    Button next {
+      icon-name: "media-skip-forward-symbolic";
+      valign: center;
+      action-name: "app.next";
+      tooltip-text: _("Play Next");
+
+      styles ["circular"]
+    }
+
+    $G4VolumeButton volume {
+      valign: center;
+    }
+  }
+}

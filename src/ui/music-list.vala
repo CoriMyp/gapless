@@ -1,17 +1,21 @@
 namespace G4 {
 
+    [GtkTemplate (ui = "/com/github/neithern/g4music/gtk/music-list.ui")]
     public class MusicList : Gtk.Box {
+        [GtkChild]
+        private unowned Gtk.GridView grid_view;
+        [GtkChild]
+        private unowned Gtk.ScrolledWindow scroll_view;
+
         private HashTable<Music?, MusicWidget?> _binding_items = new HashTable<Music?, MusicWidget?> (direct_hash, direct_equal);
         private bool _compact_list = false;
         private int _current_item = -1;
         private ListStore _data_store = new ListStore (typeof (Music));
         private Gtk.FilterListModel _filter_model = new Gtk.FilterListModel (null, null);
         private bool _grid_mode = false;
-        private Gtk.GridView _grid_view = new Gtk.GridView (null, null);
         private int _image_size = Thumbnailer.ICON_SIZE;
         private Music? _music_node = null;
         private bool _playable = false;
-        private Gtk.ScrolledWindow _scroll_view = new Gtk.ScrolledWindow ();
         private Thumbnailer _thmbnailer;
 
         private uint _columns = 1;
@@ -24,30 +28,16 @@ namespace G4 {
         public signal void item_binded (Gtk.ListItem item);
 
         public MusicList (Application app, bool playable = false, Music? node = null) {
-            orientation = Gtk.Orientation.VERTICAL;
-            hexpand = true;
-            append (_scroll_view);
-
             _playable = playable;
             _filter_model.model = _data_store;
             _music_node = node;
             _thmbnailer = app.thumbnailer;
             update_store ();
 
-            _grid_view.enable_rubberband = false;
-            _grid_view.max_columns = 5;
-            _grid_view.margin_start = _grid_view.margin_end = 8;
-            _grid_view.margin_top = _grid_view.margin_bottom = 8;
-            _grid_view.single_click_activate = true;
-            _grid_view.activate.connect ((position) => item_activated (position, _filter_model.get_item (position)));
-            _grid_view.model = new Gtk.NoSelection (_filter_model);
-            _grid_view.add_css_class ("navigation-sidebar");
+            grid_view.activate.connect ((position) => item_activated (position, _filter_model.get_item (position)));
+            grid_view.model = new Gtk.NoSelection (_filter_model);
 
-            _scroll_view.child = _grid_view;
-            _scroll_view.hscrollbar_policy = Gtk.PolicyType.NEVER;
-            _scroll_view.vscrollbar_policy = Gtk.PolicyType.AUTOMATIC;
-            _scroll_view.vexpand = true;
-            _scroll_view.vadjustment.changed.connect (on_vadjustment_changed);
+            scroll_view.vadjustment.changed.connect (on_vadjustment_changed);
         }
 
         public bool playable {
@@ -61,7 +51,7 @@ namespace G4 {
                 return _compact_list;
             }
             set {
-                var factory = _grid_view.get_factory ();
+                var factory = grid_view.get_factory ();
                 _compact_list = value;
                 if (factory != null) {
                     create_factory ();
@@ -110,7 +100,7 @@ namespace G4 {
                 return _grid_mode;
             }
             set {
-                var factory = _grid_view.get_factory ();
+                var factory = grid_view.get_factory ();
                 _grid_mode = value;
                 _image_size = value ? Thumbnailer.GRID_SIZE : Thumbnailer.ICON_SIZE;
                 if (factory != null) {
@@ -130,7 +120,7 @@ namespace G4 {
             factory.setup.connect (on_create_item);
             factory.bind.connect (on_bind_item);
             factory.unbind.connect (on_unbind_item);
-            _grid_view.factory = factory;
+            grid_view.factory = factory;
         }
 
         public void scroll_to_current_item () {
@@ -141,8 +131,8 @@ namespace G4 {
         private Adw.Animation? _scroll_animation = null;
 
         public void scroll_to_item (int index, bool smoothly = true) {
-            var adj = _scroll_view.vadjustment;
-            var list_height = _grid_view.get_height ();
+            var adj = scroll_view.vadjustment;
+            var list_height = grid_view.get_height ();
             if (smoothly && _columns > 0 && _row_height > 0 && adj.upper - adj.lower > list_height) {
                 var from = adj.value;
                 var row = index / _columns;
@@ -153,15 +143,15 @@ namespace G4 {
                 var jump = diff > list_height;
                 if (jump) {
                     // Jump to correct position first
-                    _grid_view.activate_action_variant ("list.scroll-to-item", new Variant.uint32 (index));
+                    grid_view.activate_action_variant ("list.scroll-to-item", new Variant.uint32 (index));
                 }
                 //  Scroll smoothly
                 var target = new Adw.CallbackAnimationTarget (adj.set_value);
                 _scroll_animation?.pause ();
-                _scroll_animation = new Adw.TimedAnimation (_scroll_view, adj.value, scroll_to, jump ? 50 : 500, target);
+                _scroll_animation = new Adw.TimedAnimation (scroll_view, adj.value, scroll_to, jump ? 50 : 500, target);
                 _scroll_animation?.play ();
             } else {
-                _grid_view.activate_action_variant ("list.scroll-to-item", new Variant.uint32 (index));
+                grid_view.activate_action_variant ("list.scroll-to-item", new Variant.uint32 (index));
             }
         }
 
@@ -220,13 +210,13 @@ namespace G4 {
         }
 
         private void on_vadjustment_changed () {
-            var adj = _scroll_view.vadjustment;
+            var adj = scroll_view.vadjustment;
             var range = adj.upper - adj.lower;
             var count = visible_count;
-            if (count > 0 && _row_width > 0 && _scroll_range != range && range > _grid_view.get_height ()) {
-                var max_columns = _grid_view.get_max_columns ();
-                var min_columns = _grid_view.get_min_columns ();
-                var columns = _grid_view.get_width () / _row_width;
+            if (count > 0 && _row_width > 0 && _scroll_range != range && range > grid_view.get_height ()) {
+                var max_columns = grid_view.get_max_columns ();
+                var min_columns = grid_view.get_min_columns ();
+                var columns = grid_view.get_width () / _row_width;
                 _columns = uint.min (uint.max (columns, min_columns), max_columns);
                 _row_height = range / ((count + _columns - 1) / _columns);
                 _scroll_range = range;

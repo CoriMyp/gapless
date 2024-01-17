@@ -1,0 +1,82 @@
+using Gtk 4.0;
+
+template $G4PlayPanel : Box {
+  orientation: vertical;
+  hexpand: true;
+
+  HeaderBar header_bar {
+    hexpand: true;
+
+    styles [ "flat" ]
+
+    [start]
+    Button back_btn {
+      icon-name: "go-previous-symbolic";
+      tooltip-text: _("Back");
+    }
+
+    [start]
+    Label index_label {
+    }
+
+    [title]
+    Label {
+      visible: false;
+    }
+  }
+
+  Box music_box {
+    orientation: vertical;
+    margin-top: 8;
+    width-request: 340;
+
+    Image music_cover {
+      pixel-size: 240;
+      vexpand: true;
+    }
+
+    Box {
+      orientation: vertical;
+      valign: end;
+      margin-start: 16;
+      margin-end: 16;
+      margin-top: 22;
+      width-request: 272;
+      height-request: 80;
+
+      Label initial_label {
+        halign: center;
+        hexpand: false;
+        lines: 3;
+        single-line-mode: false;
+      }
+
+      $G4StableLabel music_title {
+        ellipsize: "end";
+        halign: "center";
+
+        styles [ "title-large" ]
+      }
+
+      $G4StableLabel music_artist {
+        ellipsize: "end";
+        halign: "center";
+        margin-top: "2";
+
+        styles [ "dim-label" ]
+      }
+
+      $G4StableLabel music_album {
+        ellipsize: "end";
+        halign: "center";
+
+        styles [ "dim-label" ]
+      }
+    }
+  }
+
+  $G4PlayBar play_bar {
+    halign: fill;
+    margin-bottom: 32;
+  }
+}
