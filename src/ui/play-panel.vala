@@ -13,8 +13,6 @@ namespace G4 {
         [GtkChild]
         private unowned Gtk.Image music_cover;
         [GtkChild]
-        private unowned StableLabel music_album;
-        [GtkChild]
         private unowned StableLabel music_artist;
         [GtkChild]
         private unowned StableLabel music_title;
@@ -54,11 +52,10 @@ namespace G4 {
             _crossfade_paintable.queue_draw.connect (music_cover.queue_draw);
             music_cover.paintable = _crossfade_paintable;
 
-            music_album.tooltip_text = _("Search Album");
             music_artist.tooltip_text = _("Search Artist");
             music_title.tooltip_text = _("Search Title");
-            make_widget_clickable (music_album).released.connect (
-                () => win.start_search (music_album.label, SearchMode.ALBUM));
+            make_widget_clickable (music_cover).released.connect (
+                () => win.start_search (music_cover.tooltip_text, SearchMode.ALBUM));
             make_widget_clickable (music_artist).released.connect (
                 () => win.start_search (music_artist.label, SearchMode.ARTIST));
             make_widget_clickable (music_title).released.connect (
@@ -146,10 +143,9 @@ namespace G4 {
 
             var valid = music != null;
             initial_label.visible = !valid;
-            music_album.visible = valid;
             music_artist.visible = valid;
             music_title.visible = valid;
-            music_album.label = music?.album ?? "";
+            music_cover.tooltip_text = music?.album ?? "";
             music_artist.label = music?.artist ?? "";
             music_title.label = music?.title ?? "";
 
