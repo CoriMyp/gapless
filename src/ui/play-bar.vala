@@ -60,7 +60,6 @@ namespace G4 {
 
             var buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 16);
             buttons.halign = Gtk.Align.CENTER;
-            buttons.margin_top = 16;
             buttons.append (_repeat);
             buttons.append (_prev);
             buttons.append (_play);
