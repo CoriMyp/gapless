@@ -21,8 +21,17 @@
           </object>
         </child>
         <child type="title">
-          <object class="GtkLabel">
-            <property name="visible">false</property>
+          <object class="G4StableLabel" id="music_title">
+            <property name="marquee">true</property>
+          </object>
+        </child>
+        <child type="subtitle">
+          <object class="G4StableLabel" id="music_artist">
+            <property name="margin_top">32</property>
+            <property name="marquee">true</property>
+            <style>
+              <class name="dim-label"/>
+            </style>
           </object>
         </child>
         <child type="end">
@@ -40,11 +49,11 @@
           <object class="GtkBox" id="music_box">
             <property name="orientation">vertical</property>
             <property name="margin_top">8</property>
-            <property name="margin_bottom">32</property>
+            <property name="margin_bottom">8</property>
             <property name="width_request">340</property>
             <child>
               <object class="GtkImage" id="music_cover">
-                <property name="pixel_size">240</property>
+                <property name="pixel_size">100</property>
                 <property name="vexpand">true</property>
               </object>
             </child>
@@ -54,8 +63,6 @@
                 <property name="valign">end</property>
                 <property name="margin_start">16</property>
                 <property name="margin_end">16</property>
-                <property name="margin_top">16</property>
-                <property name="margin_bottom">16</property>
                 <property name="width_request">272</property>
                 <child>
                   <object class="GtkLabel" id="initial_label">
@@ -64,34 +71,6 @@
                     <property name="lines">3</property>
                     <property name="single_line_mode">false</property>
                     <property name="visible">false</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="G4StableLabel" id="music_title">
-                    <property name="halign">center</property>
-                    <property name="marquee">true</property>
-                    <style>
-                      <class name="title-large"/>
-                    </style>
-                  </object>
-                </child>
-                <child>
-                  <object class="G4StableLabel" id="music_artist">
-                    <property name="halign">center</property>
-                    <property name="margin_top">2</property>
-                    <property name="marquee">true</property>
-                    <style>
-                      <class name="dim-label"/>
-                    </style>
-                  </object>
-                </child>
-                <child>
-                  <object class="G4StableLabel" id="music_album">
-                    <property name="halign">center</property>
-                    <property name="marquee">true</property>
-                    <style>
-                      <class name="dim-label"/>
-                    </style>
                   </object>
                 </child>
               </object>
