@@ -36,17 +36,7 @@ namespace G4 {
                 has_cover = true;
                 uri = music.uri;
             }
-#if VALA_56_10
             return _musics.insert (music.uri, music);
-#else
-            return insert_music (music);
-#endif
-        }
-
-        protected bool insert_music (Music music) {
-            var count = _musics.length;
-            _musics.insert (music.uri, music);
-            return _musics.length > count;
         }
 
         public bool contains (string uri) {
@@ -182,11 +172,7 @@ namespace G4 {
         }
 
         public new bool add_music (Music music) {
-#if VALA_56_10
             if (_musics.insert (music.uri, music)) {
-#else
-            if (insert_music (music)) {
-#endif
                 var count = items.length;
                 items.add (music);
                 items[count]._order = count;

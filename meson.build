@@ -12,13 +12,10 @@ i18n = import('i18n')
 
 c_compiler = meson.get_compiler('c')
 vala_compiler = meson.get_compiler('vala')
+assert(vala_compiler.version().version_compare('>=0.56.10'))
 
 add_project_arguments('-DGETTEXT_PACKAGE="' + meson.project_name() + '"', language: 'c')
 add_project_arguments('--enable-experimental-non-null', language: 'vala')
-
-if vala_compiler.version().version_compare('>=0.56.10')
-  add_project_arguments('--define=VALA_56_10', language: 'vala')
-endif
 
 gtk_dep = dependency('gtk4', version: '>=4.12')
 adw_dep = dependency('libadwaita-1', version: '>=1.6')
