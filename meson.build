@@ -31,7 +31,7 @@ if gtk_dep.version().version_compare('>=4.12')
   add_project_arguments('--define=GTK_4_12', language: 'vala')
 endif
 
-adw_dep = dependency('libadwaita-1')
+adw_dep = dependency('libadwaita-1', version: '>=1.5')
 if adw_dep.version().version_compare('>=1.2')
   add_project_arguments('--define=ADW_1_2', language: 'vala')
 endif
