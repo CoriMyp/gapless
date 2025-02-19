@@ -217,14 +217,10 @@ namespace G4 {
         private void show_preferences () {
             var win = _pref_window ?? new PreferencesWindow (_app);
             _pref_window = win;
-            win.destroy_with_parent = true;
-            win.modal = false;
-            win.transient_for = _app.active_window;
-            win.close_request.connect (() => {
+            win.closed.connect (() => {
                 _pref_window = null;
-                return false;
             });
-            win.present ();
+            win.present (_app.active_window);
         }
 
         private void sort_by (SimpleAction action, Variant? state) {

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <template class="G4PreferencesWindow" parent="AdwPreferencesWindow">
-    <property name="default-width">480</property>
+  <template class="G4PreferencesWindow" parent="AdwPreferencesDialog">
     <child>
       <object class="AdwPreferencesPage">
         <child>
