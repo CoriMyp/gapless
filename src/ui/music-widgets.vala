@@ -23,9 +23,10 @@ namespace G4 {
             _playing.halign = Gtk.Align.END;
             _playing.valign = Gtk.Align.CENTER;
             _playing.icon_name = "media-playback-start-symbolic";
-            _playing.margin_end = 4;
+            _playing.margin_start = 6;
+            _playing.margin_end = 2;
             _playing.pixel_size = 10;
-            _playing.visible = false;
+            _playing.opacity = 0;
             _playing.add_css_class ("dim-label");
         }
 
@@ -125,6 +126,8 @@ namespace G4 {
         public MusicEntry (bool compact = true) {
             width_request = 324;
 
+            append (_playing);
+
             var cover_margin = compact ? 3 : 4;
             var cover_size = compact ? 36 : 48;
             _image.margin_top = cover_margin;
@@ -155,8 +158,6 @@ namespace G4 {
             var font_size = _subtitle.get_pango_context ().get_font_description ().get_size () / Pango.SCALE;
             if (font_size >= 13)
                 _subtitle.add_css_class ("title-secondly");
-
-            append (_playing);
         }
 
         public void set_titles (Music music, uint sort) {
