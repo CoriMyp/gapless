@@ -126,11 +126,7 @@ namespace G4 {
                 }
             }
 
-#if GTK_4_10
             var color = get_color ();
-#else
-            var color = get_style_context ().get_color ();
-#endif
             var opacity = char_width > value_width ? value_width / char_width : 1;
 
             Pango.Rectangle ink_rect, logic_rect;

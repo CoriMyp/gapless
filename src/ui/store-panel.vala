@@ -244,11 +244,9 @@ namespace G4 {
                     break;
             }
 
-#if GTK_4_10
             var delay = search_entry.search_delay;
             search_entry.search_delay = 0;
             run_idle_once (() => search_entry.search_delay = delay);
-#endif
             search_entry.text = text;
             search_entry.select_region (0, -1);
             search_btn.active = true;
