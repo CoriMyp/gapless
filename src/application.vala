@@ -357,10 +357,7 @@ namespace G4 {
             }
             var changed = false;
             if (replace) {
-                var count = _music_queue.get_n_items ();
-                changed = count - 1 > position;
-                for (var i = count - 1; i > position; i--)
-                    _music_queue.remove (i);
+                _music_queue.remove_all();
             }
             position++;
             changed |= merge_items_to_store (_music_queue, playlist.items, ref position);
