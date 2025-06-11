@@ -424,7 +424,7 @@ namespace G4 {
                     } catch (Error e) {
                     }
                     _loader.remove_all ();
-                    load_music_folder_async.begin (true, (obj, res) => load_music_folder_async.end (res));
+                    load_music_folder_async.begin (false, (obj, res) => load_music_folder_async.end (res));
                 });
             }
         }
