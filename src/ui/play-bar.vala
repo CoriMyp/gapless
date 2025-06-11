@@ -5,7 +5,7 @@ namespace G4 {
         private PeakBar _peak = new PeakBar ();
         private Gtk.Label _positive = new Gtk.Label ("0:00");
         private Gtk.Label _negative = new Gtk.Label ("0:00");
-        private Gtk.ToggleButton _repeat = new Gtk.ToggleButton ();
+        private Gtk.Button _repeat = new Gtk.Button ();
         private Gtk.Button _prev = new Gtk.Button ();
         private Gtk.Button _play = new Gtk.Button ();
         private Gtk.Button _next = new Gtk.Button ();
@@ -66,14 +66,31 @@ namespace G4 {
             buttons.append (_volume);
             append (buttons);
 
-            _repeat.icon_name = "media-playlist-repeat-symbolic";
+            _repeat.icon_name = "no-repeat-symbolic";
             _repeat.valign = Gtk.Align.CENTER;
-            /* Translators: single loop the current music */
-            _repeat.tooltip_text = _("Single Loop");
+            _repeat.tooltip_text = _("Enable repeat");
             _repeat.add_css_class ("flat");
-            _repeat.toggled.connect (() => {
-                _repeat.icon_name = _repeat.active ? "media-playlist-repeat-song-symbolic" : "media-playlist-repeat-symbolic";
-                app.single_loop = ! app.single_loop;
+            _repeat.clicked.connect (() => {
+                //Cycle None -> Repeat all -> Repeat one ->
+                switch (app.repeat_mode) {
+                    case NONE:
+                        app.repeat_mode = REPEAT_ALL;
+                        _repeat.icon_name = "repeat-all-symbolic";
+                        _repeat.tooltip_text = _("Enable repeat one");
+                        break;
+                    case REPEAT_ALL:
+                        app.repeat_mode = REPEAT_ONE;
+                        _repeat.icon_name = "repeat-one-symbolic";
+                        _repeat.tooltip_text = _("Disable repeat");
+                        break;
+                    case REPEAT_ONE:
+                        app.repeat_mode = NONE;
+                        _repeat.icon_name = "no-repeat-symbolic";
+                        _repeat.tooltip_text = _("Enable repeat");
+                        break;
+                    default:
+                        assert_not_reached ();
+                }
             });
 
             _prev.valign = Gtk.Align.CENTER;

@@ -6,5 +6,8 @@
     <file>gtk/play-panel.ui</file>
     <file>gtk/preferences.ui</file>
     <file>gtk/store-panel.ui</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/no-repeat-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/repeat-all-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/repeat-one-symbolic.svg</file>
   </gresource>
 </gresources>
