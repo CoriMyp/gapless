@@ -1,5 +1,11 @@
 namespace G4 {
 
+    public enum RepeatMode {
+      NONE,
+      REPEAT_ALL,
+      REPEAT_ONE,
+    }
+
     public class Application : Adw.Application {
         private ActionHandles? _actions = null;
         private int _current_index = -1;
@@ -286,7 +292,7 @@ namespace G4 {
             }
         }
 
-        public bool single_loop { get; set; }
+        public RepeatMode repeat_mode { get; set; }
 
         public uint sort_mode {
             get {
@@ -583,11 +589,23 @@ namespace G4 {
         }
 
         private void on_player_end () {
-            if (_single_loop) {
-                _player.seek (0);
-                _player.play ();
-            } else {
-                current_item++;
+            switch (repeat_mode) {
+                case NONE:
+                    current_item++;
+                    break;
+                case REPEAT_ONE:
+                    _player.seek (0);
+                    _player.play ();
+                    break;
+                case REPEAT_ALL:
+                    if (current_item == current_list.get_n_items () - 1) {
+                        current_item = 0;
+                    } else {
+                        current_item++;
+                    }
+                    break;
+                default:
+                  assert_not_reached ();
             }
         }
 
@@ -601,7 +619,7 @@ namespace G4 {
         private string? on_player_next_uri_request () {
             //  This is NOT called in main UI thread
             lock (_next_uri) {
-                if (!_single_loop)
+                if (repeat_mode != REPEAT_ONE)
                     _current_uri = _next_uri.str;
                 //  next_uri_start will be received soon later
                 return _current_uri;
@@ -714,6 +732,27 @@ namespace G4 {
         }
 
         private void update_next_item () {
+            var index = 0;
+
+            switch (repeat_mode) {
+                case REPEAT_ALL:
+                    if (_current_index == _current_list_size - 1) {
+                      index = 0;
+                    }
+                    else {
+                      index = _current_index + 1;
+                    }
+                    break;
+                case NONE:
+                    index = _current_index + 1;
+                    break;
+                case REPEAT_ONE:
+                    index = _current_index;
+                    break;
+                default:
+                    assert_not_reached ();
+            }
+
             var next_music = (Music?) _current_list.get_item (_current_index + 1);
             lock (_next_uri) {
                 _next_uri.assign (next_music?.uri ?? "");
