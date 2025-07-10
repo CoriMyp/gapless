@@ -6,7 +6,7 @@ namespace G4 {
     }
 
     [GtkTemplate (ui = "/com/github/neithern/g4music/gtk/preferences.ui")]
-    public class PreferencesWindow : Adw.PreferencesWindow {
+    public class PreferencesWindow : Adw.PreferencesDialog {
         [GtkChild]
         unowned Adw.ComboRow blur_row;
         [GtkChild]
@@ -50,7 +50,7 @@ namespace G4 {
 
             music_dir_btn.label = get_display_name (app.music_folder);
             music_dir_btn.clicked.connect (() => {
-                pick_music_folder (app, this, (dir) => {
+                pick_music_folder (app, this.get_root () as Gtk.Window, (dir) => {
                     music_dir_btn.label = get_display_name (app.music_folder);
                 });
             });
