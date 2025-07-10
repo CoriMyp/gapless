@@ -86,11 +86,11 @@ namespace G4 {
             set {
                 var cur = get_binding_widget (_current_node);
                 if (cur != null)
-                    ((!)cur).playing.visible = false;
+                    ((!)cur).playing.opacity = 0;
                 _current_node = value;
                 var widget = get_binding_widget (value);
                 if (widget != null)
-                    ((!)widget).playing.visible = true;
+                    ((!)widget).playing.opacity = 1;
             }
         }
 
@@ -446,7 +446,7 @@ namespace G4 {
             var item = (Gtk.ListItem) obj;
             var child = (MusicWidget) item.child;
             var music = (Music) item.item;
-            child.playing.visible = music == _current_node;
+            child.playing.opacity = music == _current_node ? 1 : 0;
             item_binded (item);
             _binding_items[music] = item;
 
