@@ -33,6 +33,13 @@
                 <property name="action-name">app.show-cur-tags</property>
               </object>
             </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title"  translatable="yes" context="shortcut window">Open Menu</property>
+                <property name="shortcut-type">GTK_SHORTCUT_ACCELERATOR</property>
+                <property name="accelerator">F10</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>
