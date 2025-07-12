@@ -310,11 +310,7 @@ namespace G4 {
         }
 
         public void scroll_to_directly (uint index) {
-#if GTK_4_12
             _grid_view.scroll_to (index, Gtk.ListScrollFlags.NONE, null);
-#else
-            _grid_view.activate_action_variant ("list.scroll-to-item", new Variant.uint32 (index));
-#endif
         }
 
         public override void snapshot (Gtk.Snapshot snapshot) {
@@ -334,13 +330,7 @@ namespace G4 {
                 rc_cell.offset (rc_grid.origin.x, rc_grid.origin.y);
                 rc_cell.origin.y -= (float) (_scroll_view.vadjustment.value) - (_cell_size.height - _item_size.height);
                 rc_cell.size.height = 1;
-#if ADW_1_6
                 var color = Adw.StyleManager.get_default ().accent_color.to_rgba ();
-#elif GTK_4_10
-                var color = get_color ();
-#else
-                var color = get_style_context ().get_color ();
-#endif
                 snapshot.append_color (color, rc_cell);
             }
             base.snapshot (snapshot);
@@ -564,11 +554,7 @@ namespace G4 {
                                 || drop.formats.contain_gtype (typeof (Gdk.FileList)));
             target.motion.connect (on_drop_motion);
             target.leave.connect (() => run_timeout_once (100, () => dropping_item = -1));
-#if GTK_4_10
             target.drop.connect (on_drop_done);
-#else
-            target.on_drop.connect (on_drop_done);
-#endif
             widget.add_controller (target);
         }
 
@@ -703,7 +689,6 @@ namespace G4 {
     public Gdk.ContentProvider create_content_provider (Playlist playlist) {
         var val = Value (typeof (Playlist));
         val.set_object (playlist);
-#if GTK_4_8
         var files = new GenericArray<File> (playlist.length);
         playlist.items.foreach ((music) => files.add (File.new_for_uri (music.uri)));
         var val2 = Value (typeof (Gdk.FileList));
@@ -712,9 +697,6 @@ namespace G4 {
             new Gdk.ContentProvider.for_value (val),
             new Gdk.ContentProvider.for_value (val2),
         });
-#else
-        return new Gdk.ContentProvider.for_value (val);
-#endif
     }
 
     namespace Button {

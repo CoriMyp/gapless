@@ -231,12 +231,8 @@ namespace G4 {
                 var row = new Adw.ActionRow ();
                 row.title = ti.tag;
                 row.tooltip_text = dgettext (GST_DOMAIN, ti.description);
-#if ADW_1_2
                 row.use_markup = false;
-#endif
-#if ADW_1_3
                 row.subtitle_selectable = true;
-#endif
                 row.subtitle = ti.value;
                 row.add_css_class ("property");
                 if (tag_group != ti.group || list_box == null) {

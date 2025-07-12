@@ -182,11 +182,7 @@ namespace G4 {
                 rect.init (rtl ? _view_width - size : size, 0, 0.5f, _view_height);
                 var color = Gdk.RGBA ();
                 color.red = color.green = color.blue = color.alpha = 0;
-#if GTK_4_10
                 var color2 = get_color ();
-#else
-                var color2 = get_style_context ().get_color ();
-#endif
                 color2.alpha = 0.25f;
                 Gsk.ColorStop[] stops = { { 0, color }, { 0.5f, color2 }, { 1, color } };
                 snapshot.append_linear_gradient (rect, rect.get_top_left (), rect.get_bottom_right (), stops);
@@ -199,7 +195,6 @@ namespace G4 {
         }
     }
 
-#if ADW_1_4
     public class Stack : Object {
         private bool _retain_last_popped = false;
         private Adw.NavigationPage? _last_page = null;
@@ -318,96 +313,4 @@ namespace G4 {
             return null;
         }
     }
-#else
-    public class Stack : Object {
-        private Gtk.Stack _widget = new Gtk.Stack ();
-
-        public Stack (bool retain_last_popped = false) {
-            _widget = new Gtk.Stack ();
-            animate_transitions = true;
-        }
-
-        public bool animate_transitions {
-            get {
-                return _widget.transition_type != Gtk.StackTransitionType.NONE;
-            }
-            set {
-                _widget.transition_type = value ? Gtk.StackTransitionType.SLIDE_LEFT_RIGHT : Gtk.StackTransitionType.NONE;
-            }
-        }
-
-        public Gtk.Widget parent {
-            get {
-                return _widget.parent;
-            }
-        }
-
-        public Gtk.Widget visible_child {
-            get {
-                return ((Adw.Bin) _widget.visible_child).child;
-            }
-            set {
-                _widget.visible_child = value.parent;
-            }
-        }
-
-        public Gtk.Widget widget {
-            get {
-                return _widget;
-            }
-        }
-
-        public Gtk.Widget add (Gtk.Widget child, string? tag = null) {
-            var bin = new Adw.Bin ();
-            bin.child = child;
-            _widget.add_named (bin, tag);
-            _widget.visible_child = bin;
-            notify_property ("visible-child");
-            return bin;
-        }
-
-        public void pop () {
-            var child = _widget.get_visible_child ();
-            var previous = child?.get_prev_sibling ();
-            if (child != null && previous != null) {
-                _widget.visible_child = (!)previous;
-                notify_property ("visible-child");
-                run_timeout_once (_widget.transition_duration, () => {
-                    _widget.remove ((!)child);
-                });
-            }
-        }
-
-        public Gtk.Widget? get_child_by_name (string name) {
-            return (_widget.get_child_by_name (name) as Adw.Bin)?.child;
-        }
-
-        public GenericArray<Gtk.Widget> get_children () {
-            var pages = _widget.pages;
-            var count = pages.get_n_items ();
-            var children = new GenericArray<Gtk.Widget> (count);
-            for (var i = 0; i < count; i++) {
-                var page = (Gtk.StackPage) pages.get_item (i);
-                children.add (((Adw.Bin) page.child).child);
-            }
-            return children;
-        }
-
-        public void get_visible_names (GenericArray<string> names) {
-            var pages = _widget.pages;
-            var count = pages.get_n_items ();
-            var child = _widget.visible_child;
-            for (var i = 0; i < count; i++) {
-                var page = (Gtk.StackPage) pages.get_item (i);
-                names.add (page.name);
-                if (page.child == child)
-                    break;
-            }
-        }
-
-        public void set_child (Gtk.Widget page, Gtk.Widget? child) {
-            (page as Adw.Bin)?.set_child (child);
-        }
-    }
-#endif
 }

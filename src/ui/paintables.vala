@@ -425,13 +425,7 @@ namespace G4 {
             bounds.init_from_rect (rect, radius);
             snapshot.push_rounded_clip (bounds);
 
-#if ADW_1_6
             var color = Adw.StyleManager.get_default ().accent_color.to_rgba ();
-#else
-            var color = Gdk.RGBA ();
-            color.red = color.green = color.blue = 0.5f;
-            color.alpha = 1;
-#endif
             snapshot.append_color (color, rect);
 
             color.red = color.green = color.blue = 1;

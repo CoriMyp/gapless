@@ -244,11 +244,7 @@ namespace G4 {
             target.set_gtypes ({ Type.STRING, typeof (Gdk.FileList) });
             target.accept.connect ((drop) => drop.formats.contain_gtype (typeof (Gdk.FileList))
                                 && !drop.formats.contain_gtype (typeof (Playlist)));
-#if GTK_4_10
             target.drop.connect (on_file_dropped);
-#else
-            target.on_drop.connect (on_file_dropped);
-#endif
             this.content.add_controller (target);
         }
 
